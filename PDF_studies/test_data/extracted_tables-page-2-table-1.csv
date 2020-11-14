@@ -1,0 +1,23 @@
+"Algoritmo","Sigla","Características"
+"Limited-memory
+Broyden-Fletcher-
+Goldfarb-Shanno","L-BFGS","Maximiza o logaritmo da probabilidade dos dados de treino com
+regularização L1 e/ou L2. Melhora os pesos muito lentamente no
+início, mas converge rapidamente no ﬁnal."
+"Stochastic Gradient
+Descent with L2 re-
+gularization","L2-SGD","Maximiza o logaritmo da probabilidade dos dados de treino com
+regularização L2. Aproxima dos pesos ótimos rapidamente, mas
+mostra convergência lenta no ﬁnal."
+"Averaged
+Percep-
+tron","AP","Calcula a média dos pesos em todas as atualizações do processo.
+É o algoritmo mais veloz no treinamento."
+"Passive Aggressive","PA","Utiliza o loss para atualizar o modelo."
+"Adaptive
+Regulari-
+zation
+Of
+Weight
+Vector","AROW","Também utiliza o loss, porém o computa com uma formulação dife-
+rente."
