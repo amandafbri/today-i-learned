@@ -10,14 +10,20 @@ Uma série de comandos úteis que uso ou já precisei usar na minha rotina de tr
 
 Some useful commands that I use or had to use in my work routine.
 
-## Docker
-
 ## Docker Compose
 ```bash
 docker-compose build && docker-compose up
 ```
 
 ## Git
+- Processo para atualizar uma branch com o que tem em outra (Exemplo: Trazer do develop para sua branch de feature) | Process to update a branch with content from another (For example: from develop to your feature branch)
+```bash
+git checkout develop
+git pull
+git checkout feat/MyFeature
+git pull
+git merge develop
+```
 
 ## Google Cloud
 - Seleciona projeto no qual os comandos serão aplicados | Select the project that the commands will be applied
@@ -90,4 +96,14 @@ nohup python -u <SCRIPT>.py >> <FILE TO SAVE LOG>.txt 2>&1 & tail -f <FILE TO SA
 - Exporta/carrega variáveis de ambiente de um arquivo | Export/load environment variables from file
 ```bash
 export $(grep -v '^#' <FILE>.env | xargs)
+```
+
+### Arquivos tabulares | Tabular files
+- Mostrar algumas linhas e joga em outro arquivo| Get few lines and save them in another file
+```bash
+head -n <NUMBER OF LINES TO SHOW> <TABLE>.csv > <NEW TABLE>.csv
+```
+- Troca vírgula por tab e joga em outro arquivo| Change comma to tab and save new data in another file
+```bash
+sed "s/\,/\t/g" <TABLE>.csv > <NEW TABLE>.tsv
 ```
