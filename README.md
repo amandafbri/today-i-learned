@@ -24,6 +24,10 @@ git checkout feat/MyFeature
 git pull
 git merge develop
 ```
+- Deleta todas as branches locais já mergeadas | Delete all local branches already merged
+```bash
+git branch --merged <BRANCH OF INTEREST> | grep -v '^[ *]*<BRANCH OF INTEREST>$' | xargs git branch -d
+```
 
 ## Google Cloud
 - Seleciona projeto no qual os comandos serão aplicados | Select the project that the commands will be applied
@@ -36,6 +40,12 @@ gcloud container clusters get-credentials <CLUSTER> --zone=<ZONE>
 ```
 
 ### Kubernetes
+- Configura ferramenta de linha de comando kubectl | Configure kubectl command-line tool
+```bash
+    gcloud components install kubectl
+    kubectl get pods --all-namespaces
+    kubectl logs -f <POD>
+```
 - Modifica namespace | Change namespace
 ```bash
     kubectl config current-context
@@ -50,6 +60,13 @@ gsutil -m cp -n <LARGE FOLDER> gs://<BUCKET NAME>
 - Copia arquivos baseado em uma lista
 ```bash
 cat <FILE>.csv | gsutil -m cp -I <DESTINATION FOLDER>
+```
+
+### AI Platform
+- Deploy de um modelo. Existem vários parâmetros possíveis, veja na documentação oficial. | Deploy model. There are many possible parameters, check the official documentation.
+```bash
+gcloud ai-platform models create <MODEL NAME>
+gcloud ai-platform versions create <VERSION NAME> --origin <PATH TO MODEL FILE> --runtime-version 1.15 --framework TENSORFLOW --python-version 3.7
 ```
 
 ## Django
@@ -81,7 +98,7 @@ python manage.py showmigrations <OPTIONAL:app name>
 python manage.py migrate <app name> <migration file name>
 ```
 
-## Linha de comando | Command line
+## Linha de comando | Command-line
 
 ### General
 - [11 comandos básicos | 11 basic commands](https://medium.com/better-programming/here-are-11-console-commands-every-developer-should-know-54e348ef22fa)
