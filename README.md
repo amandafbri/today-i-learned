@@ -129,6 +129,11 @@ nohup python -u <SCRIPT>.py >> <FILE TO SAVE LOG>.txt 2>&1 & tail -f <FILE TO SA
 ```bash
 export $(grep -v '^#' <FILE>.env | xargs)
 ```
+- Transfere arquivos entre local e remoto | Transfer files between local and remote
+```
+bash
+rsync -a -r --progress /local/path/ [remote user]@[remote]:/remote/path/
+```
 
 ### SED (Stream Editor)
 - Encontra padrão no arquivo e substitui por outro, jogando para outro arquivo | Find pattern in the file and replace it by another, saving in a new file
@@ -206,4 +211,10 @@ awk -F "\t" '$13 !~ /.*(Resumo)|(RESUMO).*/' <FILE>.tsv > <NEW FILE>.tsv
 - Encontra o que está faltando no arquivo 2 a partir do arquivo 1 | Find what is missing in file 2 from file 1
 ```bash
 grep -xvFf <FILE 1>.txt <FILE 2>.txt
+```
+
+## Expressões regulares | Regular expressions (RegEx)
+- Remove vírgulas extras | Remove extra commas
+```
+"^,+|,+$|+(,\w)"
 ```
