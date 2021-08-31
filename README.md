@@ -134,6 +134,11 @@ export $(grep -v '^#' <FILE>.env | xargs)
 bash
 rsync -a -r --progress /local/path/ [remote user]@[remote]:/remote/path/
 ```
+- Comprime arquivo com senha
+```
+bash
+zip --encrypt <file_name>.zip <file 1> <file ...>
+```
 
 ### SED (Stream Editor)
 - Encontra padrão no arquivo e substitui por outro, jogando para outro arquivo | Find pattern in the file and replace it by another, saving in a new file
