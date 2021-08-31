@@ -130,13 +130,11 @@ nohup python -u <SCRIPT>.py >> <FILE TO SAVE LOG>.txt 2>&1 & tail -f <FILE TO SA
 export $(grep -v '^#' <FILE>.env | xargs)
 ```
 - Transfere arquivos entre local e remoto | Transfer files between local and remote
-```
-bash
+```bash
 rsync -a -r --progress /local/path/ [remote user]@[remote]:/remote/path/
 ```
 - Comprime arquivo com senha
-```
-bash
+```bash
 zip --encrypt <file_name>.zip <file 1> <file ...>
 ```
 
