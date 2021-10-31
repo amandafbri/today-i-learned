@@ -15,6 +15,16 @@ Some useful commands that I use or had to use in my work routine.
 docker-compose build && docker-compose up
 ```
 
+## Debugging Docker in VSCode
+- Usando extensão do VSCode Docker | Using the Docker extension for VSCode
+
+ ![docker](https://user-images.githubusercontent.com/42866976/139601591-53e5602d-8774-4679-8fb3-022e35aa0932.png)
+- Vá na lista de containers, selecione a opção "Attach Visual Studio Code" clicando com o botão direito no container desejado | Go to the list of containers, select the option "Attach Visual Studio Code" by clicking with the right button in the target container
+
+![Capturar](https://user-images.githubusercontent.com/42866976/139601616-13d6f19f-a67b-4829-ae0d-c996343f52d6.PNG)
+- O VSCode irá abrir uma nova janela com o container "remoto" | The VSCode will open a new window with the "remote" container
+![opening new](https://user-images.githubusercontent.com/42866976/139601778-b3c38920-2c40-4ee5-804e-a07fc2a26f2f.png)
+
 ## Git
 - Processo para atualizar uma branch com o que tem em outra (Exemplo: Trazer do develop para sua branch de feature) | Process to update a branch with content from another (For example: from develop to your feature branch)
 ```bash
