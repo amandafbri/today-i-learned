@@ -61,6 +61,11 @@ gcloud container clusters get-credentials <CLUSTER> --zone=<ZONE>
     kubectl config current-context
     kubectl config set-context <CURRENT CONTEXT> --namespace <NAMESPACE>
 ```
+- Aplica rollback para versão anterior | Rollback to the previous version
+```bash
+   kubectl rollout undo deployment/abc
+```
+- `kubectl create` funciona pra criar vários tipos de coisas, o que muda é a flag `Kind` no yaml | `kubectl create` works for creating a lot of different things, the flag `Kind` no yaml is what designates it
 
 ### Storage
 -  Copia arquivos através de múltiplos processos (-m) para acelerar e ignora arquivos já copiados (-n de "noclobber") | Copy multiprocessed (-m) to accelerate and ignore files that already exist (-n from noclobber):
