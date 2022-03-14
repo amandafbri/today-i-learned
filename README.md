@@ -25,6 +25,12 @@ docker-compose build && docker-compose up
 - O VSCode irá abrir uma nova janela com o container "remoto" | The VSCode will open a new window with the "remote" container
 ![opening new](https://user-images.githubusercontent.com/42866976/139601778-b3c38920-2c40-4ee5-804e-a07fc2a26f2f.png)
 
+## Dockerizing repository
+
+ ```bash
+ docker run -it --volume=PUT_THE_PATH_HERE/REPO_NAME:/localDebugRepo --workdir="/localDebugRepo" --memory=4g --memory-swap=4g --memory-swappiness=0 --cpus=4 --entrypoint=/bin/bash python:3.7
+ ```
+
 ## Git
 - Processo para atualizar uma branch com o que tem em outra (Exemplo: Trazer do develop para sua branch de feature) | Process to update a branch with content from another (For example: from develop to your feature branch)
 ```bash
