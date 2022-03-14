@@ -159,6 +159,11 @@ rsync -a -r --progress /local/path/ [remote user]@[remote]:/remote/path/
 zip --encrypt <file_name>.zip <file 1> <file ...>
 ```
 
+- Install VSCODE extensions from a `extensions.yml` file
+```bash
+cat .vscode/extensions.yml | xargs -L1 code --install-extension
+```
+
 ### SED (Stream Editor)
 - Encontra padrão no arquivo e substitui por outro, jogando para outro arquivo | Find pattern in the file and replace it by another, saving in a new file
 ```bash
